@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Patua+One&display=swap');
+
 $bg-lavender-color: #FFEBEC;
 $bg-nyanza-color: #DCFFE1;
 $bg-second-color: #fafafa;
@@ -6,8 +8,12 @@ $bg-cta-color: #ffb035;
 $text-color: #0e172c;
 $text-font: 'Maven Pro';
 $heading-font: 'Patua One';
+$rounded-corners: 30px;
 
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Patua+One&display=swap');
+%card {
+  border-radius: $rounded-corners;
+}
+
 
 *,
 *:before,
@@ -27,7 +33,7 @@ body {
 }
 
 body {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -71,5 +77,103 @@ body {
       }
     }
 
+  }
+}
+
+.hero {
+  margin-top: 20px;
+
+  &__main {
+    @extend %card;
+    background-color: $bg-lavender-color;
+
+    &__content {
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+
+      &__title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        margin-top: 40px;
+      }
+
+      &__description {
+        margin-bottom: 40px;
+      }
+
+      &__cta-link {
+        color: $text-color;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+    }
+
+    &__img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto 0;
+
+      img {
+        max-height: 80%;
+        max-width: 80%;
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__cards {
+    margin-top: 30px;
+    background-color: lightcoral;
+  }
+}
+
+@media only screen and (min-width:576px) {
+  .hero {
+    &__main {
+      display: flex;
+      align-items: center;
+
+      &__content,
+      &__img {
+        height: 100%;
+        width: 50%;
+      }
+
+      &__content {
+        text-align: left;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 40px;
+
+        &__cta-link {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    &__main {
+      &__content {
+        &__title {
+          font-size: 4vw;
+        }
+
+        &__description,
+        &__cta-link {
+          font-size: 2vw;
+        }
+      }
+    }
   }
 }

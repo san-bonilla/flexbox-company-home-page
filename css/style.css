@@ -1,1 +1,190 @@
-@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Patua+One&display=swap");*,*:before,*:after{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}html,body{width:100%;min-height:100vh;color:#0e172c;background-color:#fff;font-family:"Maven Pro"}body{width:80%;margin:0 auto}.nav{margin-top:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;height:70px}.nav__logo-container{width:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.nav__logo-container img{width:100px}.nav__links-container{width:50%;list-style-type:none;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.nav__links-container li{text-align:center;padding-right:20px}.nav__links-container li .nav__link{width:100%;text-decoration:none;color:#0e172c;font-weight:bold;-webkit-transition:opacity 0.3s;transition:opacity 0.3s}.nav__links-container li .nav__link:hover{opacity:0.7}
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Patua+One&display=swap");
+.hero__main {
+  border-radius: 30px;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: #0e172c;
+  background-color: #fff;
+  font-family: "Maven Pro";
+}
+
+body {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px;
+}
+
+.nav__logo-container {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.nav__logo-container img {
+  width: 100px;
+}
+
+.nav__links-container {
+  width: 50%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.nav__links-container li {
+  text-align: center;
+  padding-right: 20px;
+}
+
+.nav__links-container li .nav__link {
+  width: 100%;
+  text-decoration: none;
+  color: #0e172c;
+  font-weight: bold;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.nav__links-container li .nav__link:hover {
+  opacity: 0.7;
+}
+
+.hero {
+  margin-top: 20px;
+}
+
+.hero__main {
+  background-color: #FFEBEC;
+}
+
+.hero__main__content {
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero__main__content__title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+
+.hero__main__content__description {
+  margin-bottom: 40px;
+}
+
+.hero__main__content__cta-link {
+  color: #0e172c;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hero__main__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto 0;
+}
+
+.hero__main__img img {
+  max-height: 80%;
+  max-width: 80%;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hero__cards {
+  margin-top: 30px;
+  background-color: lightcoral;
+}
+
+@media only screen and (min-width: 576px) {
+  .hero__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero__main__content, .hero__main__img {
+    height: 100%;
+    width: 50%;
+  }
+  .hero__main__content {
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 40px;
+  }
+  .hero__main__content__cta-link {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__main__content__title {
+    font-size: 4vw;
+  }
+  .hero__main__content__description, .hero__main__content__cta-link {
+    font-size: 2vw;
+  }
+}
