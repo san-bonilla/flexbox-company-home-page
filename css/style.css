@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Patua+One&display=swap");
-.hero__main {
+.hero__main, .hero__cards__card {
   border-radius: 30px;
 }
 
@@ -111,16 +111,18 @@ body {
 }
 
 .hero__main__content__title {
-  font-size: 2rem;
+  font-size: 11vw;
   margin-bottom: 15px;
   margin-top: 40px;
 }
 
 .hero__main__content__description {
+  font-size: 5vw;
   margin-bottom: 40px;
 }
 
 .hero__main__content__cta-link {
+  font-size: 5vw;
   color: #0e172c;
   margin-bottom: 10px;
   font-weight: bold;
@@ -148,8 +150,65 @@ body {
 }
 
 .hero__cards {
-  margin-top: 30px;
-  background-color: lightcoral;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hero__cards__card {
+  background: lightblue;
+  height: 180px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__cards__card__content {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0px 10px 20px;
+  font-size: 4vw;
+}
+
+.hero__cards__card__content__subtitle {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.hero__cards__card__content__link {
+  color: #0e172c;
+  font-weight: bold;
+}
+
+.hero__cards__card__image {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 10px;
+}
+
+.hero__cards__card__image img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 @media only screen and (min-width: 576px) {
@@ -175,8 +234,34 @@ body {
             justify-content: center;
     padding-left: 40px;
   }
+  .hero__main__content__title {
+    font-size: 6vw;
+  }
+  .hero__main__content__description {
+    font-size: 3vw;
+  }
   .hero__main__content__cta-link {
+    font-size: 3vw;
     margin-bottom: 40px;
+  }
+  .hero__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .hero__cards__card {
+    margin-right: 15px;
+    max-width: 31%;
+  }
+  .hero__cards__card__content {
+    font-size: 2vw;
   }
 }
 
@@ -186,5 +271,15 @@ body {
   }
   .hero__main__content__description, .hero__main__content__cta-link {
     font-size: 2vw;
+  }
+  .hero__cards__card__content {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .hero__cards__card {
+    height: 250px;
+    width: 31%;
   }
 }
