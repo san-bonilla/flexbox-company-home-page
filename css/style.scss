@@ -33,12 +33,12 @@ body {
 }
 
 body {
-  width: 90%;
   margin: 0 auto;
 }
 
 .nav {
-  margin-top: 20px;
+  width: 90%;
+  margin: 20px auto 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,7 +81,8 @@ body {
 }
 
 .hero {
-  margin-top: 20px;
+  width: 90%;
+  margin: 20px auto 0;
 
   &__main {
     @extend %card;
@@ -221,7 +222,6 @@ body {
       justify-content: space-between;
 
       &__card {
-        margin-right: 15px;
         max-width: 31%;
 
         &__content {
@@ -267,3 +267,91 @@ body {
     }
   }
 }
+
+/* ---------- Products Section ---------*/
+.products {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__product {
+    border-radius: 10px;
+    background-color: $bg-second-color;
+    padding: 20px 10px;
+    margin: 10px 0;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    &__image {
+      width: 100%;
+      margin-bottom: 10px;
+
+      img {
+        border-radius: 10px;
+        max-width: 100%;
+      }
+    }
+
+    &__content {
+      &__rating {
+        padding-bottom: 20px;
+      }
+
+      &__title,
+      &__price,
+      &__rating,
+      &__add-to-cart {
+        margin-bottom: 15px;
+      }
+
+      .crossed-price {
+        color: gray;
+        text-decoration: line-through;
+      }
+
+      &__add-to-cart {
+        background: #42BFDD;
+        color: $text-color;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__product:nth-of-type(even) {
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .products {
+    width: 90%;
+    margin: auto;
+
+    &__product {
+      width: 30%;
+    }
+
+    &__product:nth-of-type(even) {
+      margin-left: 0px;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .products {
+    &__product {
+      width: 19%;
+    }
+
+  }
+}
+
+/* ---------- End of Products Section ---------*/
